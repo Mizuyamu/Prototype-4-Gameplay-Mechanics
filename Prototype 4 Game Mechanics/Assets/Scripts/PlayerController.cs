@@ -21,7 +21,7 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float forwardInput = Input.GetAxis("vertical");
+        float forwardInput = Input.GetAxis("Vertical");
 
         playerRb.AddForce(focalPoint.transform.forward * forwardInput * speed);
 
@@ -54,7 +54,7 @@ public class PlayerController : MonoBehaviour
             Vector3 awayFromPlayer = collision.gameObject.transform.position - transform.position;
 
             enemyRigidbody.AddForce(awayFromPlayer * powerUpStrength, ForceMode.Impulse);
-            Debug.Log("Collide with: " + collision.gameObject.name + " with powerup set to " + hasPowerup);
+            Debug.Log("Collided with: " + collision.gameObject.name + " with powerup set to " + hasPowerup);
         }
     }
 }
