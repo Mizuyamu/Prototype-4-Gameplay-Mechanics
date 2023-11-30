@@ -6,7 +6,7 @@ public class PlayerController : MonoBehaviour
 {
     private Rigidbody playerRb;
     private GameObject focalPoint;
-    private float powerUpStrength = 25f;
+    private float powerUpStrength = 500f;
     public float speed = 5.0f;
     public bool hasPowerup = false;
     public GameObject powerupIndicator;
